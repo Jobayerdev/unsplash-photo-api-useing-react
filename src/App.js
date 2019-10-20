@@ -18,7 +18,7 @@ function App() {
                 <Route path="/about"  component={About}/>
                 <Route path="/Disclaimer"  component={Disclaimer}/>
                 <Route path="/Credits"  component={Credits}/>
-                <Route path="/Photo" component={SinglePhoto}/>
+                <Route path="/photo" component={SinglePhoto}/>
               <Footer/>
           </React.Fragment>
        </Router>

@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 			<header>
 				<div className="container">
 					<div className="row">
-						<div className="col-md-6"><a href="/"><h1>PhotoShowCase</h1></a></div>
-						<div className="col-md-6 text-right">
+						<div className="col-md-6 col-sm-6 col-12"><a href="/"><h1>PhotoShowCase</h1></a></div>
+						<div className="col-md-6 col-sm-6 col-12 text-right">
 							<ul>
 								<li><a href="/">Home</a></li>
 								<li><a href="/About">About</a></li>
