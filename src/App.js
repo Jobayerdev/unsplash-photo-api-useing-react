@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import About from './Components/About'
 import Disclaimer from './Components/Disclaimer'
 import Credits from './Components/Credits'
+import SinglePhoto from './Components/SinglePhoto'
 
 function App() {
     return(
@@ -14,9 +15,10 @@ function App() {
           <React.Fragment>
               <Header/>
                 <Route path="/" exact component={LatestPhotos}/>
-                <Route path="/about" exact component={About}/>
-                <Route path="/Disclaimer" exact component={Disclaimer}/>
-                <Route path="/Credits" exact component={Credits}/>
+                <Route path="/about"  component={About}/>
+                <Route path="/Disclaimer"  component={Disclaimer}/>
+                <Route path="/Credits"  component={Credits}/>
+                <Route path="/Photo" component={SinglePhoto}/>
               <Footer/>
           </React.Fragment>
        </Router>

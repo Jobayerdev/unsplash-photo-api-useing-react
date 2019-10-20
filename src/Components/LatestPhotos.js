@@ -78,7 +78,6 @@ class LatestPhotos extends Component {
         })
       
     }
-
     render() {
         const { photoStore,search } = this.state;
         var loadItem ='';
@@ -88,7 +87,7 @@ class LatestPhotos extends Component {
         }else{
         	 loadItem = <button onClick={this.loadMoreButton}>Load More {this.state.currentPage}</button>
         }
-        console.log(loadItem);
+        console.log(photoStore);
         return (
             <section className="main-content">
 				<div className="container">
@@ -107,15 +106,17 @@ class LatestPhotos extends Component {
 						{
 							photoStore.map((singlePhotoBox,i) => (
 								<div className="col-lg-3 col-md-4 col-sm-6" key={i}>
-									<div className="single-photo">
-										<div className="photo-thum">
-											<img src={singlePhotoBox.urls.small} alt={singlePhotoBox.alt_description}/>
+									<a href={"/photo?id="+singlePhotoBox.id}>
+										<div className="single-photo">
+											<div className="photo-thum">
+												<img src={singlePhotoBox.urls.small} alt={singlePhotoBox.alt_description}/>
+											</div>
+											<div className="photo-info">
+												<h4>{singlePhotoBox.alt_description ? singlePhotoBox.alt_description :singlePhotoBox.created_at}</h4>
+												<p>by - {singlePhotoBox.user.first_name} {singlePhotoBox.user.last_name}</p>
+											</div>
 										</div>
-										<div className="photo-info">
-											<h4>{singlePhotoBox.alt_description ? singlePhotoBox.alt_description :singlePhotoBox.created_at}</h4>
-											<p>by - {singlePhotoBox.user.first_name} {singlePhotoBox.user.last_name}</p>
-										</div>
-									</div>
+									</a>
 								</div>
 							))
 						}
