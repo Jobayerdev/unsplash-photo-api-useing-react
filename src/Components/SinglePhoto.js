@@ -38,7 +38,7 @@ import axios from 'axios'
 										<li>Upload date {SinglePhotoStore.created_at}</li>
 										<li>Camera model {SinglePhotoStore.exif && SinglePhotoStore.exif.model}</li>
 									</ul>
-									<a href={SinglePhotoStore.links && SinglePhotoStore.links.download} target="_blank">Download</a>
+									<a href={SinglePhotoStore.links && SinglePhotoStore.links.download}>Download</a>
 								</div>
 							</div>
 						</div>
